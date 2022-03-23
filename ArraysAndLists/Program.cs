@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ArraysAndLists
 {
@@ -6,7 +7,7 @@ namespace ArraysAndLists
     {
         static void Main(string[] args)
         {
-            //TODO:
+            //TODO: (DONE!!!) Leaving instructions for readability: 
 
             // Create an int Array and populate numbers 1-10
 
@@ -27,6 +28,47 @@ namespace ArraysAndLists
              *
              * Try to be creative in your display
              */
+
+            int[] Array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            var evens = new List<int>();
+            var odds = new List<int>();
+
+            foreach (int i in Array) {
+                if (i % 2 == 0) {
+                    evens.Add(i);
+                }
+                else
+                {
+                    odds.Add(i);
+                }
+            }
+
+            Console.WriteLine("odds:");
+            foreach (int i in odds) {
+                if (i == odds[evens.Count - 1])
+                {
+                   Console.Write($"{i}");
+                }
+                else
+                {
+                   Console.Write($"{i},");
+                }
+
+            }
+            Console.WriteLine("\nevens:");
+            foreach (int i in evens)
+            {
+                if (i == evens[evens.Count-1])
+                {
+                    Console.Write($"{i}");
+                }
+                else
+                {
+                    Console.Write($"{i},");
+                }
+
+            }
+
         }
     }
 }
